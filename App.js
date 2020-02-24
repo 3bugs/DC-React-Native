@@ -16,6 +16,17 @@ import {
     Alert,
 } from 'react-native';
 
+const MyButton = props => (
+    <TouchableOpacity activeOpacity={0.5}
+                      onPress={() => {
+                          props.onClick(props.num);
+                      }}>
+        <View style={styles.button}>
+            <Text style={styles.buttonText}>{props.num}</Text>
+        </View>
+    </TouchableOpacity>
+);
+
 class App extends Component {
 
     state = {
@@ -111,111 +122,29 @@ class App extends Component {
                     </View>
 
                     <View style={styles.row}>
-                        {/*ปุ่ม 1*/}
-                        <TouchableOpacity activeOpacity={0.5}
-                                          onPress={() => {
-                                              this.handlePressButton(1);
-                                          }}>
-                            <View style={styles.button}>
-                                <Text style={styles.buttonText}>1</Text>
-                            </View>
-                        </TouchableOpacity>
-
-                        {/*ปุ่ม 2*/}
-                        <TouchableOpacity activeOpacity={0.5}
-                                          onPress={() => {
-                                              this.handlePressButton(2);
-                                          }}>
-                            <View style={styles.button}>
-                                <Text style={styles.buttonText}>2</Text>
-                            </View>
-                        </TouchableOpacity>
-
-                        {/*ปุ่ม 3*/}
-                        <TouchableOpacity activeOpacity={0.5}
-                                          onPress={() => {
-                                              this.handlePressButton(3);
-                                          }}>
-                            <View style={styles.button}>
-                                <Text style={styles.buttonText}>3</Text>
-                            </View>
-                        </TouchableOpacity>
+                        {/*ปุ่ม 1, 2, 3*/}
+                        <MyButton num="1" onClick={this.handlePressButton}/>
+                        <MyButton num="2" onClick={this.handlePressButton}/>
+                        <MyButton num="3" onClick={this.handlePressButton}/>
                     </View>
 
                     <View style={styles.row}>
-                        {/*ปุ่ม 4*/}
-                        <TouchableOpacity activeOpacity={0.5}
-                                          onPress={() => {
-                                              this.handlePressButton(4);
-                                          }}>
-                            <View style={styles.button}>
-                                <Text style={styles.buttonText}>4</Text>
-                            </View>
-                        </TouchableOpacity>
-
-                        {/*ปุ่ม 5*/}
-                        <TouchableOpacity activeOpacity={0.5}
-                                          onPress={() => {
-                                              this.handlePressButton(5);
-                                          }}>
-                            <View style={styles.button}>
-                                <Text style={styles.buttonText}>5</Text>
-                            </View>
-                        </TouchableOpacity>
-
-                        {/*ปุ่ม 6*/}
-                        <TouchableOpacity activeOpacity={0.5}
-                                          onPress={() => {
-                                              this.handlePressButton(6);
-                                          }}>
-                            <View style={styles.button}>
-                                <Text style={styles.buttonText}>6</Text>
-                            </View>
-                        </TouchableOpacity>
+                        {/*ปุ่ม 4, 5, 6*/}
+                        <MyButton num="4" onClick={this.handlePressButton}/>
+                        <MyButton num="5" onClick={this.handlePressButton}/>
+                        <MyButton num="6" onClick={this.handlePressButton}/>
                     </View>
 
                     <View style={styles.row}>
-                        {/*ปุ่ม 7*/}
-                        <TouchableOpacity activeOpacity={0.5}
-                                          onPress={() => {
-                                              this.handlePressButton(7);
-                                          }}>
-                            <View style={styles.button}>
-                                <Text style={styles.buttonText}>7</Text>
-                            </View>
-                        </TouchableOpacity>
-
-                        {/*ปุ่ม 8*/}
-                        <TouchableOpacity activeOpacity={0.5}
-                                          onPress={() => {
-                                              this.handlePressButton(8);
-                                          }}>
-                            <View style={styles.button}>
-                                <Text style={styles.buttonText}>8</Text>
-                            </View>
-                        </TouchableOpacity>
-
-                        {/*ปุ่ม 9*/}
-                        <TouchableOpacity activeOpacity={0.5}
-                                          onPress={() => {
-                                              this.handlePressButton(9);
-                                          }}>
-                            <View style={styles.button}>
-                                <Text style={styles.buttonText}>9</Text>
-                            </View>
-                        </TouchableOpacity>
+                        {/*ปุ่ม 7, 8, 9*/}
+                        <MyButton num="7" onClick={this.handlePressButton}/>
+                        <MyButton num="8" onClick={this.handlePressButton}/>
+                        <MyButton num="9" onClick={this.handlePressButton}/>
                     </View>
 
                     <View style={styles.row}>
                         {/*ปุ่ม 0*/}
-                        <TouchableOpacity activeOpacity={0.5}
-                                          onPress={() => {
-                                              this.handlePressButton(0);
-                                          }}>
-                            <View style={styles.button}>
-                                <Text style={styles.buttonText}>0</Text>
-                            </View>
-                        </TouchableOpacity>
+                        <MyButton num="0" onClick={this.handlePressButton}/>
                     </View>
                 </View>
             </ImageBackground>
