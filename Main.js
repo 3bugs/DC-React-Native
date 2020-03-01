@@ -1,7 +1,7 @@
 import 'react-native-gesture-handler';
 import React, {Component} from 'react';
 import Login from './screen/Login';
-import App from './App';
+import Products from './screen/QrScanner';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
@@ -19,8 +19,8 @@ export default class Main extends Component {
                         options={{title: 'Login'}}
                     />
                     <Stack.Screen
-                        name="App"
-                        component={App}
+                        name="Products"
+                        component={Products}
                     />
                 </Stack.Navigator>
             </NavigationContainer>

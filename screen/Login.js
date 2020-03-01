@@ -86,7 +86,8 @@ export default class Login extends Component {
             } else if (responseJson.login_result === '0') {
                 alert('Username หรือ Password ไม่ถูกต้อง');
             } else if (responseJson.login_result === '1') {
-                alert('เข้าสู่ระบบสำเร็จ');
+                //alert('เข้าสู่ระบบสำเร็จ');
+                this.props.navigation.navigate('Products');
             }
 
             this.setState({
